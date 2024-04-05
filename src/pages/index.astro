@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon/components'
+
+const flags = 
+[{
+	flag:'', 
+	name:'Ingles',
+},
+{
+	flag:'', 
+	name:'Francés',
+},
+{
+	flag:'', 
+	name:'Alemán',
+	
+},
+{
+	flag:'', 
+	name:'Italiano',
+},
+{
+	flag:'', 
+	name:'Portugues',
+}
+]
+
+---
+
+<Layout title="Duolingo">
+	<div class="justify-center h-16 flex items-center shadow-sm border-solid border-2 ">
+	<div class="flex items-center font-semibold text-gray-600">
+		<Icon name="mdi:chevron-left" />
+		{
+			flags.map((flag) => <a href="#">
+				<Icon name="flagpack:um" size={25} />	{flag.name} 
+		</a>
+		) 
+		}
+		<Icon name="mdi:chevron-right" />
+	</div>
+</div>
+</Layout>
